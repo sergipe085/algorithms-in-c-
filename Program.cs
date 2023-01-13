@@ -3,6 +3,7 @@ public class Program {
     static void Main(string[] args) {
         LinearSortAlgorithm();
         NBitBinaryAdditionAlgorithm();
+        MergeSortAlgorithm();
     }
 
     private static void LinearSortAlgorithm() {
@@ -29,9 +30,17 @@ public class Program {
         }
     }
 
-    private static void PrintNumberArray(int[] numbers) {
+    private static void MergeSortAlgorithm() {
+        int[] numbers = new int[] { 43, 3, 64, 82, 21, 46, 87, 3, 9, 4, 76 };
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.Execute(ref numbers, 0, numbers.Length - 1);
+
+        PrintNumberArray(numbers);
+    }
+
+    public static void PrintNumberArray(int[] numbers) {
         foreach(int n1 in numbers) {
-            Console.Write(n1);
+            Console.Write(n1 + ",");
         }
         Console.WriteLine("");
     }
