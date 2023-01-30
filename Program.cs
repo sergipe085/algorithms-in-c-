@@ -2,8 +2,9 @@
 public class Program {
     static void Main(string[] args) {
         LinearSortAlgorithm();
-        NBitBinaryAdditionAlgorithm();
-        MergeSortAlgorithm();
+        QuickSortAlgorithm();
+        // NBitBinaryAdditionAlgorithm();
+        // MergeSortAlgorithm();
     }
 
     private static void LinearSortAlgorithm() {
@@ -15,6 +16,17 @@ public class Program {
         linearSort.Execute(ref numbers);
 
         PrintNumberArray(numbers);
+    }
+
+    private static void QuickSortAlgorithm() {
+        List<int> numbers = new List<int>() {
+            5, 3, 8, 1
+        };
+
+        QuickSort linearSort = new QuickSort();
+        List<int> result =  linearSort.Execute(numbers);
+
+        PrintNumberArray(result.ToArray());
     }
 
     private static void NBitBinaryAdditionAlgorithm() {
